@@ -8,10 +8,20 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <StackPanel>
-            <Button x:Name="btnNewContactWIndow" Content="New Contact" Click="btnNewContactWIndow_Click" ></Button>
-            <TextBox x:Name="txtFilter" TextChanged="txtFilter_TextChanged" ></TextBox>
-            <ListView x:Name="lstContacts"  SelectionChanged="contactsListView_SelectionChanged">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Button x:Name="btnNewContactWIndow" Content="New Contact" Click="btnNewContactWIndow_Click"  Grid.Row="0" Grid.Column="0" ></Button>
+        <Label Content="Filter" Grid.Row="0" Grid.Column="1"></Label>
+        <TextBox x:Name="txtFilter" TextChanged="txtFilter_TextChanged"  Grid.Row="0" Grid.Column="2" ></TextBox>
+        <ListView x:Name="lstContacts"  SelectionChanged="contactsListView_SelectionChanged"   Grid.Row="1" Grid.ColumnSpan="3">
                 <ListView.ItemContainerStyle>
                     <Style TargetType="ListViewItem">
                         <Setter Property="HorizontalContentAlignment" Value="Stretch"></Setter>
@@ -23,6 +33,6 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-        </StackPanel>
+         
     </Grid>
 </Window>

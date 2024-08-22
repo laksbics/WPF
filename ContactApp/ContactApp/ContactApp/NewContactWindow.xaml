@@ -5,7 +5,6 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ContactApp"
         mc:Ignorable="d"
-        WindowStyle="None"
         ResizeMode="NoResize"
         Title="New Contact Window" Height="200" Width="400">
     <Grid>

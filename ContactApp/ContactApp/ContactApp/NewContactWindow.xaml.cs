@@ -52,6 +52,5 @@ namespace ContactApp
 
             Close();
         }
-
     }
 }

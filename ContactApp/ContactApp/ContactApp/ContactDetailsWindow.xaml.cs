@@ -34,7 +34,6 @@ namespace ContactApp
             WindowStartupLocation = WindowStartupLocation.CenterOwner;
         }
 
-
         private void btnDelete_Click(object sender, RoutedEventArgs e)
         {
             using (SQLiteConnection connection = new SQLiteConnection(App.databasePath))
@@ -45,12 +44,10 @@ namespace ContactApp
             this.Close();
         }
 
-
         private void btnClose_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
         }
-
 
         private void btnUpdate_Click(object sender, RoutedEventArgs e)
         {
