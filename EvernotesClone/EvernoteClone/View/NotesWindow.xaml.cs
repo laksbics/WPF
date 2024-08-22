@@ -146,13 +146,20 @@ namespace EvernoteClone.View
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            string rtfFile = System.IO.Path.Combine(Environment.CurrentDirectory, $"{viewModel.SelectedNote.Id}.rtf");
-            viewModel.SelectedNote.FileLocation = rtfFile;
-            DatabaseHelper.Update(viewModel.SelectedNote);
+            if (viewModel.SelectedNote != null)
+            {
+                string rtfFile = System.IO.Path.Combine(Environment.CurrentDirectory, $"{viewModel.SelectedNote.Id}.rtf");
+                viewModel.SelectedNote.FileLocation = rtfFile;
+                DatabaseHelper.Update(viewModel.SelectedNote);
 
-            FileStream fileStream = new FileStream(rtfFile, FileMode.Create);
-            var contents = new TextRange(contentRichTextBox.Document.ContentStart, contentRichTextBox.Document.ContentEnd);
-            contents.Save(fileStream, DataFormats.Rtf);
+                FileStream fileStream = new FileStream(rtfFile, FileMode.Create);
+                var contents = new TextRange(contentRichTextBox.Document.ContentStart, contentRichTextBox.Document.ContentEnd);
+                contents.Save(fileStream, DataFormats.Rtf);
+            }
+            else
+            {
+                MessageBox.Show("Select a note");
+            }
         }
     }
 }
