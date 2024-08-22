@@ -1,0 +1,17 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/Calculator/Calculator/Calculator/bin/Debug/Calculator.exe
+/Calculator/Calculator/Calculator/bin/Debug/Calculator.pdb
+/Calculator/Calculator/Calculator/obj/Debug/Calculator.csproj.CoreCompileInputs.cache
+/Calculator/Calculator/Calculator/obj/Debug/Calculator.csproj.FileListAbsolute.txt
+/Calculator/Calculator/Calculator/obj/Debug/Calculator.exe
+/Calculator/Calculator/Calculator/obj/Debug/Calculator.pdb
+/Calculator/Calculator/Calculator/obj/Debug/Calculator_MarkupCompile.cache
+/Calculator/Calculator/Calculator/obj/Debug/Calculator_MarkupCompile.lref
+/Calculator/Calculator/Calculator/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+/Calculator/Calculator/.vs/Calculator/v17/.suo
+/Calculator/Calculator/.vs/Calculator/v17/DocumentLayout.json
+/Calculator/Calculator/.vs/Calculator/FileContentIndex/2350b8df-0054-4588-af41-d4dfb9550e36.vsidx

@@ -68,7 +68,7 @@ namespace Calculator
                         result = SimpleMath.Add(lastNumber, newNumber);
                         break;
                     case SelectedOperator.Sustraction:
-                        result = SimpleMath.Sustraction(lastNumber, newNumber);
+                        result = SimpleMath.Subtraction(lastNumber, newNumber);
                         break;
                     case SelectedOperator.Multiplication:
                         result = SimpleMath.Multiply(lastNumber, newNumber);
@@ -81,6 +81,7 @@ namespace Calculator
                 lblResult.Content = result.ToString();
             }
         }
+
         private void btnAC_Click(object sender, RoutedEventArgs e)
         {
             lblResult.Content = "0";
